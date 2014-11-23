@@ -1,0 +1,33 @@
+{
+    "name": "yii-dream-team/yii2-jstree",
+    "description": "Yii2 JsTree assets and widget",
+    "type": "yii2-extension",
+    "keywords": [
+        "yii2",
+        "jstree",
+        "widget"
+    ],
+    "homepage": "https://github.com/yii-dream-team/yii2-jstree",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Samoylov",
+            "email": "alexey.samoylov@gmail.com",
+            "homepage": "http://yiiblog.ru",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/yii-dream-team/yii2-jstree/issues",
+        "source": "https://github.com/yii-dream-team/yii2-jstree"
+    },
+    "require": {
+        "yiisoft/yii2": "~2",
+		"vakata/jstree": "~3"
+    },
+    "autoload": {
+        "psr-4": {
+            "yiidreamteam\\jstree\\": "./src"
+        }
+    }
+}
