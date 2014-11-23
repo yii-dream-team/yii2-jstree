@@ -6,6 +6,7 @@
 namespace yiidreamteam\jstree;
 
 use yii\bootstrap\Widget;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Json;
 
@@ -29,10 +30,10 @@ class JsTree extends Widget
      */
     public function run()
     {
-        $id = $this->containerOptions['id'] ?: $this->getId();
+        $id = ArrayHelper::getValue($this->containerOptions, 'id', $this->getId());
         $this->containerOptions['id'] = $id;
-        $options = Json::encode($this->options);
-        $this->getView()->registerJs("$('#{$id}').jstree({$options});");
+        $jsOptions = Json::encode($this->jsOptions);
+        $this->getView()->registerJs("$('#{$id}').jstree({$jsOptions});");
         echo Html::tag('div', '', $this->containerOptions);
     }
 }
