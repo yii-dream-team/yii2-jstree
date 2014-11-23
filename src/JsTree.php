@@ -22,7 +22,8 @@ class JsTree extends Widget
     public function init()
     {
         $view = $this->getView();
-        JsTreeBundle::register($view);
+        $bundle = JsTreeBundle::register($view);
+        $bundle->theme = false;
     }
 
     /**
