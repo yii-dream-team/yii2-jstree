@@ -22,7 +22,7 @@ class JsTreeBundle extends AssetBundle
      */
     public function registerAssetFiles($view)
     {
-        $min = defined('YII_DEBUG');
+        $min = !defined('YII_DEBUG');
         $this->js[] = $min ? 'jstree.min.js' : 'jstree.js';
         if ($this->theme != false) {
             $cssFile = $min ? 'style.min.css' : 'style.css';
@@ -31,5 +31,4 @@ class JsTreeBundle extends AssetBundle
 
         parent::registerAssetFiles($view);
     }
-
 }
