@@ -1,4 +1,4 @@
-# Yii2 JsTree component #
+# Yii2 JsTree Component #
 
 jsTree is jquery plugin, that provides interactive trees. It is absolutely free, open source 
 and distributed under the MIT license. jsTree is easily extendable, themable and configurable, 
@@ -36,7 +36,7 @@ MIT
     
 ## Links ##
 
-* http://www.jstree.com/
-* https://github.com/vakata/jstree
-* https://github.com/yii-dream-team/yii2-jstree
-* https://packagist.org/packages/yii-dream-team/yii2-jstree
+* [JsTree official site](http://www.jstree.com/)
+* [JsTree on GitHub](https://github.com/vakata/jstree)
+* [Yii2 JsTree on GitHub](https://github.com/yii-dream-team/yii2-jstree)
+* [Yii2 JsTree on Packagist](https://packagist.org/packages/yii-dream-team/yii2-jstree)
