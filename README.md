@@ -6,11 +6,21 @@ it supports HTML & JSON data sources and AJAX loading.
 
 This package allows you to integrate jsTree jQuery plugin into your project in a few minutes.
 
-### Installation ###
+## Installation ##
 
-    composer require "yii-dream-team/yii2-jstree:*"
+The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
-### Usage ###
+Either run
+
+    php composer.phar require --prefer-dist yii-dream-team/yii2-jstree "*"
+
+or add
+
+    "yii-dream-team/yii2-jstree": "*"
+
+to the `require` section of your composer.json.
+
+## Usage ##
 
     <?= \yiidreamteam\jstree\JsTree::widget([
         'containerOptions' => [
