@@ -16,7 +16,13 @@ class JsTree extends Widget
     public $containerTag = 'div';
     public $containerOptions = [];
 
-    public $bundledTheme = false;
+    /**
+     * @var boolean|string $bundledTheme
+     * Set to false to use a custom theme and then set jsOptions['core']['themes'] with theme information.
+     * Set to 'default' or 'default-dark' to use one the bundled themes.
+     * @see http://www.jstree.com/api/#/?f=$.jstree.defaults.core.themes
+     */
+    public $bundledTheme = 'default';
 
     /**
      * @inheritdoc
@@ -26,6 +32,12 @@ class JsTree extends Widget
         $view = $this->getView();
         $bundle = JsTreeBundle::register($view);
         $bundle->theme = $this->bundledTheme;
+        if ($this->bundledTheme !== false && !isset($this->jsOptions['core']['themes'])) {
+            $this->jsOptions['core']['themes'] = [
+                'name' => $this->bundledTheme,
+                'url' => $bundle->baseUrl . '/themes/' . $this->bundledTheme . '/style.min.css',
+            ];
+        }
     }
 
     /**
