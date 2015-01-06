@@ -33,7 +33,7 @@ to the `require` section of your composer.json.
                     'url' => \yii\helpers\Url::to(['ajax/tree']),
                 ],
                 'themes' => [
-                    'theme' => 'foobar',
+                    'name' => 'foobar',
                     'url' => "/themes/foobar/js/jstree3/style.css",
                     'dots' => true,
                     'icons' => false,
