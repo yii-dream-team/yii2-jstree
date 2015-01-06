@@ -35,7 +35,6 @@ class JsTree extends Widget
         if ($this->bundledTheme !== false && !isset($this->jsOptions['core']['themes'])) {
             $this->jsOptions['core']['themes'] = [
                 'name' => $this->bundledTheme,
-                'url' => $bundle->baseUrl . '/themes/' . $this->bundledTheme . '/style.min.css',
             ];
         }
     }
