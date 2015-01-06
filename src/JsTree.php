@@ -16,6 +16,8 @@ class JsTree extends Widget
     public $containerTag = 'div';
     public $containerOptions = [];
 
+    public $bundledTheme = false;
+
     /**
      * @inheritdoc
      */
@@ -23,7 +25,7 @@ class JsTree extends Widget
     {
         $view = $this->getView();
         $bundle = JsTreeBundle::register($view);
-        $bundle->theme = false;
+        $bundle->theme = $this->bundledTheme;
     }
 
     /**
